@@ -1,0 +1,177 @@
+#Font configuration
+font:
+  normal:
+    family: Hack
+    style: Regular
+  bold:
+    family: Hack
+    style: bold
+  italic:
+    family: Hack
+    style: Italic
+  bold_italic:
+    family: Hack
+    style: Bold Italic
+  #Point size
+  size: 7
+  offset:
+    x: 0
+    y: -1
+
+window: 
+  padding:
+    x: 3
+    y: 6
+  decoations: none
+  opacity: 0.95
+
+schemes:
+
+  st_primary: &st_primary
+    foreground: '0xe8e8e8'
+    background: '0x2c2c2c'
+
+
+  st_cursor: &st_cursor
+    text: '0x2c2c2c'
+    cursor: '0xa439cd'
+
+  st_selection: &st_selection
+    text: '0xFFFFFF'
+    background: '0x0037da'
+
+  grad_selection: &grad_selection
+    text: '0x2c2c2c'
+    background: '0xbb8b48'
+
+  eva_selection: &eva_selection
+    text: '0xd0d1f8'
+    background: '0xd71816'
+
+  1custom: &1custom
+    black:      '0x0c0c0c'
+    red:        '0xd33a47'
+    green:      '0x229c55'
+    yellow:     '0xECA377'
+    blue:       '0x226394'
+    magenta:    '0xc3599a'
+    cyan:       '0x3a96dd'
+    white:      '0xcccccc'
+
+  2custom: &2custom
+    black:      '0x767676'
+    red:        '0xff5060'
+    green:      '0x16c60c'
+    yellow:     '0xE3C479'
+    blue:       '0x1C8ABB'
+    magenta:    '0xD37291'
+    cyan:       '0x46b0b0'
+    white:      '0xf2f2f2'
+
+  1campbell: &1campbell
+    black:      '0x0c0c0c'
+    red:        '0xc50f1f'
+    green:      '0x13a10e'
+    yellow:     '0xc19c00'
+    blue:       '0x0037da'
+    magenta:    '0x881798'
+    cyan:       '0x3a96dd'
+    white:      '0xcccccc'
+
+  2campbell: &2campbell
+    black:      '0x767676'
+    red:        '0xe74856'
+    green:      '0x16c60c'
+    yellow:     '0xf9f1a5'
+    blue:       '0x3b78ff'
+    magenta:    '0xb4009e'
+    cyan:       '0x61d6d6'
+    white:      '0xf2f2f2'
+
+  1gotham: &1gotham
+    black: '0x0a0f14'
+    red: '0xc33027'
+    green: '0x26a98b'
+    yellow: '0xedb54b'
+    blue: '0x195465'
+    magenta: '0x4e5165'
+    cyan: '0x33859d'
+    white: '0x98d1ce'
+
+  2gotham: &2gotham
+    black: '0x10151b'
+    red: '0xd26939'
+    green: '0x081f2d'
+    yellow: '0x245361'
+    blue: '0x093748'
+    magenta: '0x888ba5'
+    cyan: '0x599caa'
+    white: '0xd3ebe9'
+
+  1Cobalt2: &1Cobalt2
+    black:   '0x000000'
+    red:     '0xff0000'
+    green:   '0x37dd21'
+    yellow:  '0xfee409'
+    blue:    '0x1460d2'
+    magenta: '0xff005d'
+    cyan:    '0x00bbbb'
+    white:   '0xbbbbbb'
+
+  2Cobalt2: &2Cobalt2
+    black:   '0x545454'
+    red:     '0xf40d17'
+    green:   '0x3bcf1d'
+    yellow:  '0xecc809'
+    blue:    '0x5555ff'
+    magenta: '0xff55ff'
+    cyan:    '0x6ae3f9'
+    white:   '0xffffff'
+
+  1tangodark: &1tangodark
+    black: '0x2e3436'
+    red: '0xcc0000'
+    green: '0x4e9a06'
+    yellow: '0xc4a000'
+    blue: '0x3465a4'
+    magenta: '0x75507b'
+    cyan: '0x06989a'
+    white: '0xd3d7cf'
+
+  2tangodark: &2tangodark
+    black: '0x555753'
+    red: '0xef2929'
+    green: '0x8ae234'
+    yellow: '0xfce94f'
+    blue: '0x729fcf'
+    magenta: '0xad7fa8'
+    cyan: '0x34e2e2'
+    white: '0xeeeeec'
+
+  1smooooth: &1smooooth
+    black:   '0x14191e'
+    red:     '0xb43c29'
+    green:   '0x00c200'
+    yellow:  '0xc7c400'
+    blue:    '0x2743c7'
+    magenta: '0xbf3fbd'
+    cyan:    '0x00c5c7'
+    white:   '0xc7c7c7'
+
+  2smooooth: &2smooooth
+    black:   '0x676767'
+    red:     '0xdc7974'
+    green:   '0x57e690'
+    yellow:  '0xece100'
+    blue:    '0xa6aaf1'
+    magenta: '0xe07de0'
+    cyan:    '0x5ffdff'
+    white:   '0xfeffff'
+
+#choose custom, campbell, gotham, Cobalt2, smooooth, tangodark
+colors: 
+  primary: *st_primary
+  cursor: *st_cursor
+  selection: *grad_selection
+  normal: *1custom
+  bright: *2custom
