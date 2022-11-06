@@ -2,14 +2,25 @@ force_color_prompt=yes
 #PS1='${debian_chroot:+($debian_chroot)}\[\033[00;31m\]\u\[\033[00m\]@\[\033[00;36m\]\h\[\033[00;36m\]:\[\033[00;36m\]\w\[\033[00m\]\$ '
 #PS1='${debian_chroot:+($debian_chroot)}\[\033[00m\][\[\033[00;31m\]\u\[\033[00m\]@\[\033[00;36m\]\h\[\033[00;36m\]\w\[\033[00m\]]\[\033[00m\]\$ '
 #unimatrix -l cCkSsaA -f -n -c magenta -s 99 -w
-~/misc/scripts/grad_trueC
 #export PS1='${debian_chroot:+($debian_chroot)}\[\033[00m\][\[\033[00;36m\]\w\[\033[00m\]]\[\033[00m\]\$ '
+if [[ $(readlink /proc/$PPID/exe) != $(which nvim) ]] ; then
+	~/misc/scripts/grad_trueC
+fi
+#readlink /proc/$PPID/exe
+
+
 export PS1='\[\033[0m\][\[\033[00;36m\]\w\[\033[00m\]]\[\033[00m\]\$ '
 export HOME='/home/feliks'
 export XDG_STATE_HOME=$HOME'/.local/state'
 export XDG_CACHE_HOME=$HOME'/.cache'
 export XDG_CONFIG_HOME=$HOME'/.config'
 export XDG_DATA_HOME=$HOME'/.local/share'
+
+alias fuzip='~/.local/bin/fixpdf'
+alias fucopy='~/.local/bin/fucopy'
+alias fufixpdf='~/.local/bin/fufixpdf'
+alias fuxournalexport='~/.local/bin/fuxournalexport'
+alias fixpdf='~/.local/bin/fixpdf'
 
 alias cs='cat /home/feliks/documents/archive/cheatsheet'
 alias csw='nvim /home/feliks/documents/archive/cheatsheet'
@@ -19,16 +30,29 @@ alias vimi3='nvim /home/feliks/.config/i3/config'
 alias startup='nvim /home/feliks/.profile'
 alias nvimconfig='sudo nvim /etc/xdg/nvim/sysinit.vim'
 alias matrix='unimatrix -l 'o' -c magenta -s 90'
+alias suspend='i3lock-fancy -p -t "" && systemctl suspend'
+alias s='i3lock-fancy -p -t "" && systemctl suspend'
+alias z='zathura'
+alias tex='xelatex'
+#alias config='/usr/bin/git'
+#alias terminal-phase='raco terminal-phase'
+alias pipes='pipes.sh -r 20000 -p 3 -R'
+alias conf='/usr/bin/git --git-dir=/home/feliks/misc/git --work-tree=/home/feliks'
+alias solid='pkill picom && picom &'
+
+#handle hdmi
 alias hdmi='xrandr --output HDMI-2 --auto --below eDP-1'
 alias same='xrandr --output HDMI-2 --auto --same-as eDP-1'
-alias suspend='i3lock-fancy -p -t "" & systemctl suspend'
-alias s='i3lock-fancy -p -t "" & systemctl suspend'
-alias z='zathura'
-alias config='/usr/bin/git'
-alias terminal-phase='raco terminal-phase'
-alias pipes='pipes.sh'
-alias conf='/usr/bin/git --git-dir=/home/feliks/misc/git --work-tree=/home/feliks'
 
+#navigage dirs
+alias ana2='cd /home/feliks/documents/ana2'
+alias CP='cd /home/feliks/documents/computerphysik'
+alias doc='cd /home/feliks/documents/'
+alias pic='cd /home/feliks/media/pics'
+alias dow='cd /home/feliks/downloads'
+alias alp3='cd /home/feliks/documents/alp3_t'
+
+#xdg base dirs stuff/cleaning up my home
 alias yarn='yarn --use-yarn "$HOME"/.config/yarn/config'
 export GTK2_RC_FILES="$HOME/.config/gtk-2.0/gtkrc/.gtkrc-2.0"
 export EDITOR="/usr/bin/nvim"
