@@ -15,6 +15,7 @@ export XDG_STATE_HOME=$HOME'/.local/state'
 export XDG_CACHE_HOME=$HOME'/.cache'
 export XDG_CONFIG_HOME=$HOME'/.config'
 export XDG_DATA_HOME=$HOME'/.local/share'
+export SWT_GTK3=0
 
 alias fuzip='~/.local/bin/fixpdf'
 alias fucopy='~/.local/bin/fucopy'
@@ -24,7 +25,7 @@ alias fixpdf='~/.local/bin/fixpdf'
 
 alias cs='cat /home/feliks/documents/archive/cheatsheet'
 alias csw='nvim /home/feliks/documents/archive/cheatsheet'
-alias backup='cp -u /home/feliks/.config/i3/config /home/feliks/Documents/archive/backup/config'
+#alias backup='cp -u /home/feliks/.config/i3/config /home/feliks/Documents/archive/backup/config'
 alias i3config='nano /home/feliks/.config/i3/config'
 alias vimi3='nvim /home/feliks/.config/i3/config'
 alias startup='nvim /home/feliks/.profile'
@@ -39,18 +40,29 @@ alias tex='xelatex'
 alias pipes='pipes.sh -r 20000 -p 3 -R'
 alias conf='/usr/bin/git --git-dir=/home/feliks/misc/git --work-tree=/home/feliks'
 alias solid='pkill picom && picom &'
+alias tsh='trash'
 
 #handle hdmi
 alias hdmi='xrandr --output HDMI-2 --auto --below eDP-1'
 alias same='xrandr --output HDMI-2 --auto --same-as eDP-1'
+alias tut2='xrandr --output HDMI-2 --auto --left-of eDP-1 && nitrogen --restore'
 
 #navigage dirs
+export ana2='/home/feliks/documents/ana2'
 alias ana2='cd /home/feliks/documents/ana2'
+export CP='/home/feliks/documents/computerphysik'
 alias CP='cd /home/feliks/documents/computerphysik'
+export CB='/home/feliks/documents/compilerbau'
+alias CB='cd /home/feliks/documents/compilerbau'
+export doc='/home/feliks/documents/'
 alias doc='cd /home/feliks/documents/'
+export pic='/home/feliks/media/pics'
 alias pic='cd /home/feliks/media/pics'
+export dow='/home/feliks/downloads'
 alias dow='cd /home/feliks/downloads'
+export alp3='/home/feliks/documents/alp3_t'
 alias alp3='cd /home/feliks/documents/alp3_t'
+alias pkt='nvim ~/documents/alp3_t/punkte'
 
 #xdg base dirs stuff/cleaning up my home
 alias yarn='yarn --use-yarn "$HOME"/.config/yarn/config'

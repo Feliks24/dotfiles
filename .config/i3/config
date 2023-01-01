@@ -146,8 +146,8 @@ workspace 3 output eDP-1
 workspace 4 output eDP-1
 workspace 5 output eDP-1
 workspace 6 output HDMI-2 eDP-1
-workspace 7 output eDP-1
-workspace 8 output eDP-1
+workspace 7 output HDMI-2 eDP-1
+workspace 8 output HDMI-2 eDP-1
 workspace 9 output HDMI-2 eDP-1
 workspace 10 output HDMI-2 eDP-1
 
@@ -289,7 +289,7 @@ bindsym $mod+Shift+d gaps inner current set 0; gaps outer current set 0
 bindsym $mod+Shift+Delete exec poweroff
 bindsym $mod+Shift+BackSpace exec reboot
 #bindsym $mod+Shift+Return exec xflock4
-bindsym $mod+Shift+End exec --no-startup-id i3lock-fancy -p -t "" & systemctl suspend
+bindsym $mod+Shift+End exec --no-startup-id i3lock-fancy -p -t "" && systemctl suspend
 bindsym $mod+Shift+Insert exec --no-startup-id i3lock-fancy -p -t "" 
 
 
